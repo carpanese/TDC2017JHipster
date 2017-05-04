@@ -1,0 +1,37 @@
+
+<div *ngIf="task">
+    <h2><span jhiTranslate="appApp.task.detail.title">Task</span> {{task.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="appApp.task.descricao">Descricao</span></dt>
+        <dd>
+            <span>{{task.descricao}}</span>
+        </dd>
+        <dt><span jhiTranslate="appApp.task.status">Status</span></dt>
+        <dd>
+            <span jhiTranslate="{{'appApp.Status.' + task.status}}">{{task.status}}</span>
+        </dd>
+        <dt><span jhiTranslate="appApp.task.duoDate">Duo Date</span></dt>
+        <dd>
+            <span>{{task.duoDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span jhiTranslate="appApp.task.user">User</span></dt>
+        <dd>
+            {{task.user?.id}}
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'task/'+ task.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

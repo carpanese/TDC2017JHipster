@@ -1,0 +1,10 @@
+{
+    "appApp": {
+        "Status" : {
+            "null": "",
+            "OPEN": "Aberto",
+            "PROGRESS": "Em Progresso",
+            "DONE": "Concluído"
+        }
+    }
+}

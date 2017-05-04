@@ -1,0 +1,25 @@
+{
+    "appApp": {
+        "task" : {
+            "home": {
+                "title": "Tasks",
+                "createLabel": "Criar novo Task",
+                "createOrEditLabel": "Criar ou editar Task",
+                "search": "Pesquisar por Task"
+            },
+            "created": "Um novo Task é criado com o identificador {{ param }}",
+            "updated": "Um Task é atualizado com o identificador {{ param }}",
+            "deleted": "Um Task é deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Task {{ id }}?"
+            },
+            "detail": {
+                "title": "Task"
+            },
+            "descricao": "Descricao",
+            "status": "Status",
+            "duoDate": "Duo Date",
+            "user": "User"
+        }
+    }
+}

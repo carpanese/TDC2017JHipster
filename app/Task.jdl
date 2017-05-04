@@ -1,0 +1,18 @@
+entity Task {
+	descricao String required,
+	status Status,
+	duoDate LocalDate required
+}
+
+enum Status {
+	OPEN,
+    PROGRESS,
+    DONE
+}
+
+relationship ManyToOne {
+	Task{user} to User
+}
+
+service * with serviceClass except User
+paginate Task with infinite-scroll
